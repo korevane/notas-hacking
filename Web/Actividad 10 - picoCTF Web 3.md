@@ -117,6 +117,14 @@ picoCTF{G3tting_5QL_1nJ3c7I0N_l1k3_y0u_sh0ulD_3b0fca37}
 ## Desde BurpSuite
 
 1. Ingresamos a la página
+2. Activamos el proxy
+3. Realizamos el ataque de inyección SQL
+4. Revisamos en POST -> Pretty
+
+
+## Desde BurpSuite
+
+1. Ingresamos a la página
 2. Interceptamos la inyección
 3. Vamos la solicitud inicial
 4. Vamos a la respuesta
@@ -191,7 +199,22 @@ sudo apt install john
 ```
 13. Ingresamos la cookie en John
 ```
-john [nombre_archivo] -w-/usr/share/wordlists/rockyou.txt
+john hash -w=/usr/share/wordlists/rockyou.txt
+```
+14. Obtenemos la palabra clave
+```
+ilovepico
+```
+15. Modificamos la cookie original en jwt.io user = admin, password = ilovepico
+```
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiYWRtaW4ifQ.gtqDl4jVDvNbEe_JYEZTN19Vx6X9NNZtRVbKPBkhO-s
+```
+16. Ingresamos 
+17. Modificamos la cookie
+18. Refrescamos
+19. Obtenemos la bandera
+```
+picoCTF{jawt_was_just_what_you_thought_f859ab2f}
 ```
 
 
